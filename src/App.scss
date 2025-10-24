@@ -2,6 +2,7 @@
 
 @use './scss/' as *;
 @use './components/layouts/' as *;
+@use './scss/responsive' as *;
 
 @font-face {
   font-family:"Gilroy-Bold";

@@ -2,9 +2,7 @@ import React from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import img from "../assets/images/items/equipo.webp";
-import About from "../components/layouts/About";
 import TeamSection from "../components/layouts/TeamSection";
-import ButtonWhatsapp from "../components/button/ButtonWhatsapp";
 import { Helmet } from "react-helmet";
 import Action from "../components/layouts/Action";
 const AboutUs = () => {

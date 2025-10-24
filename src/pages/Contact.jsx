@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import { Helmet } from "react-helmet";
-import "../components/layouts/map-section.scss";
 
 const Contact = () => {
   return (
