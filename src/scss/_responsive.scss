@@ -1,0 +1,130 @@
+@use './variables' as *;
+
+// Global responsive improvements
+@include mobile {
+  // General container improvements
+  .container {
+    padding: 0 15px;
+  }
+  
+  // Typography improvements
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+  }
+  
+  // Button improvements
+  .btn-action {
+    padding: 12px 24px;
+    font-size: 14px;
+    
+    &.style-2 {
+      padding: 10px 20px;
+      font-size: 13px;
+    }
+  }
+  
+  // Form improvements
+  .form-control {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  
+  // Section padding improvements
+  .tf-section {
+    padding: 40px 0;
+  }
+  
+  // Block text improvements
+  .block-text {
+    text-align: center;
+    
+    .title {
+      font-size: 28px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+    
+    .sub-title {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+  
+  // Grid improvements
+  .row {
+    margin: 0 -10px;
+    
+    [class*="col-"] {
+      padding: 0 10px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  // Card improvements
+  .card, .box-item {
+    margin-bottom: 20px;
+  }
+  
+  // Navigation improvements
+  .main-nav {
+    .menu {
+      li {
+        padding: 10px 0;
+        
+        a {
+          font-size: 16px;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+  
+  // Footer improvements
+  .footer {
+    .footer__content {
+      text-align: center;
+      
+      .footer__logo {
+        margin-bottom: 20px;
+      }
+      
+      .footer__links {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+// Tablet specific improvements
+@include tablet {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .block-text {
+    .title {
+      font-size: 32px;
+    }
+    
+    .sub-title {
+      font-size: 17px;
+    }
+  }
+  
+  .tf-section {
+    padding: 60px 0;
+  }
+}
+
+// Desktop improvements
+@include desktop-1200 {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

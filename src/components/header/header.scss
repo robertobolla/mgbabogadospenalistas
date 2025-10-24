@@ -358,6 +358,24 @@
 }
 
 @include mobile {
+    .header {
+        height: 80px;
+        
+        &.is-fixed {
+            height: 70px;
+        }
+        
+        .header__logo img {
+            width: 150px;
+        }
+        
+        .header__right {
+            .social {
+                display: none;
+            }
+        }
+    }
+    
     .download-btn-container {
         margin-right: 10px;
         
