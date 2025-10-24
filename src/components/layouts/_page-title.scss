@@ -1,0 +1,235 @@
+@use './../../scss/' as *;
+
+.page-title__body  {
+    background: transparent;
+    position: relative;
+    border-radius: 20px;  
+    .container{padding-bottom: 0px!important;}
+    
+    @include mobile {
+        margin-top: -80px;
+        margin-bottom: -50px;
+        padding: 0 0px;
+        text-align: center;
+    }   
+    .block-text {
+        text-align: left;     
+
+        @include mobile {
+            padding-top: 0;
+            text-align: center;
+        }
+        .sub-title {
+            @include mobile {
+                margin-bottom: 20px;
+            &::after{
+                left: 45%;
+                margin-top: -80px;
+                @include mobile {
+                    margin-bottom: -35px;
+                    }
+                }   
+            }     
+        }
+    }     
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        opacity: 0.1;
+        border-radius: 20px;
+        mix-blend-mode: screen;
+    }
+   
+    
+    img {
+        position: absolute;
+        margin-right: -100px;
+        border: solid 0px $principal-dark;
+        box-shadow:0 0 5px rgb(5, 0, 5),
+                                         0 0 10px hwb(294 7% 64% / 0.355),
+                                         0 0 0px rgb(194, 40, 211),  
+                                         0 0 20px rgb(145, 12, 159);
+        border-radius: 20px;
+        @include tablet {
+            position: relative;
+            width: 100%;
+        }
+
+        
+    }
+
+    &.rm {
+        img {
+            right: 39px;
+            &.s2 {
+                right: 129px;
+            }
+        }
+    }
+}
+.s3 {   
+        position: relative;
+        width: 330px;
+        height: 280px;
+        background-color: white;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+        margin-top: 60px;
+        border-radius: 10%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+    }
+
+.s3::after{
+        content: "";
+        position: absolute;        
+        width: 320px;
+        height: 270px;
+        background-image: url(../../assets/images/items/contact.webp);
+        border-radius: 10%;
+
+    }
+
+.column-right {
+    margin-top: 0px;
+    margin-left: 0px;    
+
+
+
+    img {
+        padding-top: 0px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        
+        
+    }
+    @include mobile {  
+        padding-top: 15px;            
+        img {
+        position: relative;
+        width: 100%;
+        margin-left: -10px;
+        padding-left: 0;
+        }  
+     }
+}
+
+
+.page-title{
+    margin-top: 50px;
+    margin-bottom: 60px;    
+    @include mobile {
+        margin-top: 0px;        
+    }
+    .container {
+        background-color: #030314;
+        border-radius: 25px;
+    }
+    .block-text{
+        margin-top: 40px;
+        padding: 0px 50px 0 80px;
+        color: #fff;
+        .sub-title{
+            margin-bottom: -20px;
+            &::after {
+                bottom: 40px
+            }     
+            @include mobile {
+                margin-bottom: 25px;
+                &::after {
+                    bottom: 5px
+                }  
+            }      
+        }
+    }
+    .about-img {
+        margin-top: 0px;
+        padding: 0 20px;
+        scale: 1;
+        @include mobile {
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    } 
+    
+}
+
+.column-right2 {
+    margin-top: 0px;
+    margin-left: 0px;    
+
+
+
+    img {
+        padding-top: 0px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        
+        
+    }
+    @include mobile {  
+        padding-top: 15px;            
+        img {
+        position: relative;
+        width: 100%;
+        margin-left: -10px;
+        padding-left: 0;
+        }  
+     }
+}
+
+
+.page-title2{
+    margin-top: 50px;
+    margin-bottom: 60px;    
+    @include mobile {
+        margin-top: 0px;        
+    }
+    .container {
+        background-color: #030314;
+        border-radius: 25px;
+        padding-bottom: 40px!important;
+    }
+    .block-text{
+        margin-top: 20px;
+        padding: 0px 50px 0 80px;
+        color: #fff;
+        .sub-title{
+            margin-bottom: -20px;
+            &::after {
+                bottom: 40px
+            }     
+            @include mobile {
+                margin-bottom: 25px;
+                &::after {
+                    bottom: 5px
+                }  
+            }      
+        }
+    }
+    .about-img {
+        margin-top: -60px;
+        padding: 0 20px;
+        scale: 0.9;
+        @include mobile {
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    } 
+    
+}

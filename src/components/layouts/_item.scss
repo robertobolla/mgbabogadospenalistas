@@ -1,0 +1,220 @@
+@use './../../scss/' as *;
+.group-right{
+    margin-top: 0px;
+    
+}
+
+.item-pc {  
+    @include mobile {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.item-cel { 
+    margin-left: -50px;      
+    @include tablet {
+        padding-left: 590px;
+    }
+    @include mobile {
+        padding-left: 0;
+        margin-left: -30px;
+    }
+        
+}
+.item-tablet {
+    height: 300px;  
+    margin-top: -250px;
+    margin-left:-1050px; 
+    @include tablet {
+        margin-left: 0;
+        margin-right: 0px;
+    }
+    @include mobile {
+        margin-top: -300px;
+        padding-left: 0px;
+        margin-left: -940px;
+    }  
+}
+
+.item-note {   
+    margin-top: -300px;    
+    padding-left: 60px; 
+    img {
+        width: 600px;
+    }
+    @include tablet {
+        margin-right: 0px;
+        margin-left: -210px;
+    }
+    @include mobile {
+        margin-top: -300px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+   }
+.item-logo {
+    margin-top: 0px;
+    margin-bottom: -140px;
+    margin-left: -400px;
+    padding-bottom: 50px;
+    transform: scale(1);
+    @include tablet{
+        visibility: hidden;
+        padding-bottom: 20px;
+    }    
+    @include mobile{
+        visibility: visible;
+        margin-left: -200px;
+        margin-bottom: 0;
+    }
+}
+.item-image {   
+    border-radius: 20px;
+    display: flex;    
+    justify-content: center;
+    
+}
+
+.section-responsive .item-image {   
+    border-radius: 20px;
+    &.big {
+
+        width: 420px;
+        height: 500px;
+        margin-left: -100px;
+        @include tablet {
+            margin-left: 220px;
+        }
+        @include mobile {
+            width: 320px;
+            margin-left: 0px;
+        }
+    }
+    &.small {
+        width: 199px;
+        height: 237px;
+        margin-top: -310px; 
+        @include tablet {
+            margin-top: -250px;
+        }          
+        @include mobile {
+            margin-top: -290px;
+            margin-right: 0;
+        }
+    }
+
+    img {
+        animation: move 3s infinite linear;
+    }
+}
+
+
+@keyframes move {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+  }
+
+
+
+.hero-slider.style-2 {
+    position: relative;
+    .shape {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        @include mobile {
+            display: none;
+        }
+    }
+    .item {
+        position: absolute;
+        z-index: -1;
+        animation: up-down linear 4s;
+        animation-iteration-count: infinite;
+        transform-origin: 50% 50%;
+        -webkit-animation: up-down linear 4s;
+        -webkit-animation-iteration-count: infinite;
+
+        @keyframes up-down{
+            0% {
+              transform:  translate(1px,20px)  ;
+            }
+            24% {
+              transform:  translate(1px,30px)  ;
+            }
+            50% {
+              transform:  translate(1px,12px)  ;
+            }
+            74% {
+              transform:  translate(1px,22px)  ;
+            }
+            100% {
+              transform:  translate(1px,22px)  ;
+            }
+          }
+
+        &:nth-child(1) {
+            @include size(108px,108px);
+            left: 13%;
+            top: -4%;
+        }
+        &:nth-child(2) {
+            @include size(170px,170px);
+            left: 1.3%;
+            top: 34%;
+        }
+        &:nth-child(3) {
+            @include size(120px,120px);
+            left: 13.6%;
+            top: 91.2%;
+        }
+        &:nth-child(4) {
+            @include size(149px,149px);     
+            right: 19.3%;
+            top: -13%;
+        }
+        &:nth-child(5) {
+            @include size(170px,170px);
+            right: 4.5%;
+            top: 24%
+        }
+        &:nth-child(6) {
+            @include size(91px,91px);
+            right: 12.2%;
+            top: 88%;
+        }
+        &:nth-child(7) {
+            @include size(134px,134px);
+            right: 24%;
+            top: 111%;
+        }
+
+        @include tablet {
+            &:nth-child(1) {
+                left: 5%;
+                top: -4%;
+            }
+            &:nth-child(2),&:nth-child(5) {
+                opacity: 0;
+            }
+            &:nth-child(4) {
+                right: 9.3%;
+                top: -21%;
+            }
+        }
+
+    }
+}

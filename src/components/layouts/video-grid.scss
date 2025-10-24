@@ -1,0 +1,155 @@
+@use '../../scss/' as *;
+
+.video-grid-container {
+  background-color: #e0e0e0;
+  padding: 80px 0;
+  
+  .block-text{
+    padding-left: 0px;
+    @include mobile {
+        padding-left: 22px;
+    }
+    .title {
+        color: $principal-dark;
+        font-size: 40px;
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+    .sub-title {
+        font-size: 18px;
+        &::after {
+            left: 0%;
+            @include tablet {
+                left: 48%;
+            }
+            @include mobile {
+                left: 46%;
+            }
+}}}
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  @include tablet {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.video-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  
+  .video-wrapper {
+    width: 100%;
+    height: 100%;
+    
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+  
+  .video-duration-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    pointer-events: none;
+  }
+}
+
+.video-info {
+  padding: 20px;
+  
+  .video-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    font-family: $font-main;
+    
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+  
+  .video-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+    
+    .video-channel {
+      font-weight: 500;
+      color: $principal;
+    }
+    
+    .video-views {
+      color: #999;
+    }
+  }
+}
+
+// Estilos adicionales para mejor presentación
+.video-grid-container {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+// Responsive adjustments
+@include tablet {
+  .video-grid-container {
+    padding: 60px 0;
+  }
+}
+
+@include mobile {
+  .video-grid-container {
+    padding: 40px 0;
+    
+    .container {
+      padding: 0 15px;
+    }
+  }
+  
+  .video-thumbnail {
+    height: 180px;
+  }
+}
